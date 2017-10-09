@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 include("parameters.php");
+include("api_functions.php");
 
 
 $operation = "CreateHIT";
@@ -21,13 +22,12 @@ $frame_height = 800;
 $timestamp = generate_timestamp(time());
 $signature = generate_signature($SERVICE_NAME, $operation, $timestamp, $AWS_SECRET_ACCESS_KEY);
 
-include("api_functions.php");
-
 
 //scan the video folder
 $folder_list=scandir("../vids");
 
-$arr = array(2,5);//3,5,6,10,11,12,13,14,15,21,22,23,24,25,41,42,43,44,45,47,48,53);
+//$arr = array(2,5);//3,5,6,10,11,12,13,14,15,21,22,23,24,25,41,42,43,44,45,47,48,53);
+$arr = array(1);
 //for($v=2;$v<count($folder_list);$v++)
 
 foreach ($arr as $key=>$id)
@@ -38,7 +38,7 @@ foreach ($arr as $key=>$id)
 
 
     //check how many frame the video is
-    $images=scandir("../vids/vid$id/images");
+    $images=scandir("../vids/vid$id/images_clad");
     echo (count($images)-2)."<br><br>";
     //$assignment_duration=??
     //$reward=??
@@ -47,7 +47,7 @@ foreach ($arr as $key=>$id)
 
     //https://mechanicalturk.amazonaws.com/onca/xml https://mechanicalturk.sandbox.amazonaws.com
 
-    $url2 = "https://mechanicalturk.amazonaws.com/onca/xml"
+    $url2 = "https://mechanicalturk.sandbox.amazonaws.com"
   . "?Service=" . urlencode($SERVICE_NAME)
   . "&Operation=" . urlencode($operation)
   . "&Title=" . urlencode($title)
@@ -71,7 +71,7 @@ foreach ($arr as $key=>$id)
   . "&Keywords=activity,%20video,%20labelling,%20annotation,%20ground+truth";
 
 
-
+ echo $url2."<br>";
 
     /*
     $xml = simplexml_load_file($url2);
@@ -92,13 +92,13 @@ foreach ($arr as $key=>$id)
 
 
 // Check for and print results and errors
-function print_errors($error_nodes) {
-  print "There was an error processing your request:\n";
-  foreach ($error_nodes as $error) {
-    print "  Error code:    " . $error->Code . "\n";
-    print "  Error message: " . $error->Message . "\n";
-  }
-}
+//function print_errors($error_nodes) {
+ // print "There was an error processing your request:\n";
+ // foreach ($error_nodes as $error) {
+   // print "  Error code:    " . $error->Code . "\n";
+   // print "  Error message: " . $error->Message . "\n";
+ // }
+//}
 
 
 

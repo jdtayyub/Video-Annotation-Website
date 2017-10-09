@@ -24,4 +24,12 @@ function print_errors($error_nodes) {
   }
 }
 
+function constructQuestion($url, $frame_height) {
+     $question1 = '<ExternalQuestion xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd">';
+     $question1 .= '<ExternalURL>'.$url.'</ExternalURL>';
+     $question1 .= '<FrameHeight>'.$frame_height.'</FrameHeight>';
+     $question1 .= '</ExternalQuestion>';
+     return $question1;
+}
+
 ?>

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
@@ -20,6 +19,11 @@ $( function() {
 
 
 <?php
+//error_recording(E_ALL);
+//ini_set("diplay_errors", 1);
+
+//echo "11";
+//exit();
 
 if(!isset($_REQUEST['assignmentId']))
   $assignment_id="ASSIGNMENT_ID_NOT_AVAILABLE";

@@ -121,6 +121,8 @@ var start = "<?php echo $start_timestamp; ?>";
     </div>
   <div class = "line" style=" float:left; width:100%;"></div>
 
+ <!-- <form action="activity_annotator.php" method="post"> <!-- for spell check -->
+
    <div id = "questions" style = "float:left;">
    <h3> Section 1 </h3>
          <div id='ques1'><?php echo $pieces[1]; ?></div><input id='ans1' style="width:25px;" maxlength="1" min="0" max="9" type="number"></input>
@@ -158,7 +160,11 @@ var start = "<?php echo $start_timestamp; ?>";
         <div class = "field"><p>End Frame</p><input readonly class = "eframe" type="number" min="1" max="2000" name="eframe" ><button class="myownbutton getFrame">Set End Frame</button></div>
 
         <div class = "field label"><p>Activity Label</p>
-          <input class = "actLabel" type="text" name="actlabel" >
+	<!-- <form method="post"> -->
+          <input class = "actLabel" type="text" name="actlabel">
+	  <!-- <input type="submit" value="Submit"> -->
+	 <!-- </form> -->
+
 	 <!-- labels in a drop-down list-->
 	 <!-- uncomment the following lines and comment the line above -->
 	 <!--</label for="sel1">
@@ -174,12 +180,12 @@ Warning: Please use 2-3 words only to describe the activity. Consider adding eac
           <span style="display:block; color:red;">(Short phrase only: 2-3 words)</span>
 
         </div>
-        <button class="myownbutton addAnnon">Add Activity</button>
+         <button class="myownbutton addAnnon">Add Activity</button>
+	 <!-- <input class = "myownbutton" type="submit" value="Add Activity"> <!-- for spell check -->
         </div>
         <div class = "line" style=" float:left; width:100%;"></div>
       </div>
-
-
+ <!-- </form> <!-- for spell check -->
 
       <div id = "controls">
 
@@ -234,6 +240,22 @@ Warning: Please use 2-3 words only to describe the activity. Consider adding eac
          <a href="#" class="myButton submit">Submit Answer</a>
 
 	 <?php } ?>
+
+<?php
+#PHP Source Code
+require "utilities/phpspellcheck/include.php";
+
+//$mySpell = new SpellCheckButton();
+//$mySpell->InstallationPath = "/phpspellcheck/";
+//$mySpell->Fields = "ALL";
+//echo $mySpell->SpellImageButton();
+
+
+$mySpell = new SpellAsYouType();
+$mySpell->InstallationPath = "utilities/phpspellcheck/";
+$mySpell->Fields = "ALL";
+echo $mySpell->Activate();
+?>
 
          <div>
 

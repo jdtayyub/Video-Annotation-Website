@@ -25,7 +25,7 @@ $( document ).ready(function() {
 
     for (i = 0; i < image_count; i++) {
       images[i] = new Image()
-      images[i].src = '../../'+images_path+"/Kinect_" + pad(i+1,4) + ".jpg";
+      images[i].src = '../../Annotators/'+images_path+"/Kinect_" + pad(i+1,4) + ".jpg";
       //images[i].src = '../../Annotators/'+images_path+"/RGB_" + (i+1) + ".png";
       //console.log(images[i].src);
     }
@@ -145,8 +145,35 @@ function addAnnon()
   var aL = $('.actLabel').val();
   var sF = $('.sframe').val();
   var eF = $('.eframe').val();
+  var check_sp = "true";
+  var sC = document.getElementById('livespell__input__0___livespell_proxy'), oChild;
 
-  if ((aL != '') && (sF != '') && (eF != '')) {
+
+  //$('#livespell__input__0___livespell_proxy .livespell_redwiggle').length
+  for(i = 0; i < sC.childNodes.length; i++){
+        oChild = sC.childNodes[i];
+        if(oChild.nodeName == 'SPAN'){
+	     check_sp="false";
+            //alert(oChild.id);
+        }
+    }
+
+/*
+  var sC;
+  $.ajax({
+	async: false,
+	type: 'get',
+	url: "utilities/spell_check.php?phrase="+aL,
+	//dataType: 'json',
+	success: function(result){
+		sC = result;
+		//alert(result+"aa");
+		return sC;
+		}
+	}); */
+
+  if ((aL != '') && (sF != '') && (eF != '') && (check_sp == "true")) { 
+  //if ((aL != '') && (sF != '') && (eF != '')) {
     if(parseInt(sF) >= parseInt(eF))   alert('Start frame cannot be after end frame!');
     else {
 
@@ -164,7 +191,7 @@ function addAnnon()
 
     }
   }else {
-    alert('Some Fields are empty, Please make sure you fill in the activity label and its start and end frames before adding the annotation.');
+    alert('Some Fields are empty, Please make sure you fill in the activity label and its start and end frames before adding the annotation. Also, check if you have made any spelling mistakes!');
   }
 
   return false;

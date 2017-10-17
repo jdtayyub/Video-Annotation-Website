@@ -66,7 +66,11 @@ $( document ).ready(function() {
   });
 
   $('.addAnnon').click(function(){
+
+    var delayMillis = 1000;
+    setTimeout(function() {
     addAnnon()
+    }, delayMillis);
   });
 
   /*$('.actLabel').keypress(function (e) {
@@ -171,9 +175,7 @@ function addAnnon()
 		return sC;
 	}
   });*/
- 
-  //var delayMillis = 4000;
-  //setTimeout(function() {	 
+ 	 
   if ((aL != '') && (sF != '') && (eF != '') && (check_sp == "true")) {
   //if ((aL != '') && (sF != '') && (eF != '')) {
   //alert(num_lines);//debug
@@ -198,8 +200,6 @@ function addAnnon()
   else {
   	alert('Some Fields are empty, Please make sure you fill in the activity label and its start and end frames before adding the annotation. Also, check if you have any spelling misakes!');
   } // end else
-
- // }, delayMillis);
 
   return false;
 }// end function

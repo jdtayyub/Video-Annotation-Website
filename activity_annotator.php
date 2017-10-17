@@ -111,7 +111,8 @@ var start = "<?php echo $start_timestamp; ?>";
        <li>Enter a short label (1-3 words) describing the activity from the perspective of the chosen actor - for example, "cooking dinner", "dicing onion", "picking up spoon";</li>
        <li>Press "Add Activity" to add into the table on the right-hand side. If you wish to remove an identified activity, you can delete it from the table.</li>
        </ul>
-       <p style='margin-top: 0;'>You will be paid ?? for each activity appearing in the table, and a bonus of ?? per activity if you provide concise and appropriate labels, accurate start/end times and a spread of overlapping activities that are constituents of one another.</p>
+	<p style='margin-top: 0;'>Please, pay attention in labeling the activities correctly and note that you are going to have approximatly 15 minutes o finish this task. </p> 
+       <!-- <p style='margin-top: 0;'>You will be paid ?? for each activity appearing in the table, and a bonus of ?? per activity if you provide concise and appropriate labels, accurate start/end times and a spread of overlapping activities that are constituents of one another.</p> -->
        <p style='margin-top: 0;'>Allow up to a minute for the video to load.</p>
     
 
@@ -120,8 +121,6 @@ var start = "<?php echo $start_timestamp; ?>";
   <?php } ?>
     </div>
   <div class = "line" style=" float:left; width:100%;"></div>
-
- <!-- <form action="activity_annotator.php" method="post"> <!-- for spell check -->
 
    <div id = "questions" style = "float:left;">
    <h3> Section 1 </h3>
@@ -160,11 +159,7 @@ var start = "<?php echo $start_timestamp; ?>";
         <div class = "field"><p>End Frame</p><input readonly class = "eframe" type="number" min="1" max="2000" name="eframe" ><button class="myownbutton getFrame">Set End Frame</button></div>
 
         <div class = "field label"><p>Activity Label</p>
-	<!-- <form method="post"> -->
-          <input class = "actLabel" type="text" name="actlabel">
-	  <!-- <input type="submit" value="Submit"> -->
-	 <!-- </form> -->
-
+          <input class = "actLabel" type="text" name="actlabel" >
 	 <!-- labels in a drop-down list-->
 	 <!-- uncomment the following lines and comment the line above -->
 	 <!--</label for="sel1">
@@ -180,12 +175,12 @@ Warning: Please use 2-3 words only to describe the activity. Consider adding eac
           <span style="display:block; color:red;">(Short phrase only: 2-3 words)</span>
 
         </div>
-         <button class="myownbutton addAnnon">Add Activity</button>
-	 <!-- <input class = "myownbutton" type="submit" value="Add Activity"> <!-- for spell check -->
+        <button class="myownbutton addAnnon">Add Activity</button>
         </div>
         <div class = "line" style=" float:left; width:100%;"></div>
       </div>
- <!-- </form> <!-- for spell check -->
+
+
 
       <div id = "controls">
 
@@ -229,33 +224,36 @@ Warning: Please use 2-3 words only to describe the activity. Consider adding eac
 
          if(strcmp($assignment_id,"ASSIGNMENT_ID_NOT_AVAILABLE")!=0){?>
   <!-- https://workersandbox.mturk.com/mturk/externalSubmit , https://www.mturk.com/mturk/externalSubmit-->
-	 <form id='sendData' method="post" action="https://www.mturk.com/mturk/externalSubmit">
+	  <form id='sendData' method="post" action=<?php require "url2.php"; echo $URL2_ACT_ANN;?> >
+	<!-- <form id='sendData' method="post" action="https://workersandbox.mturk.com/mturk/externalSubmit" > -->
 	 <input type="hidden" name="assignmentId" value="<?php echo $assignment_id;?>">
    <input type="hidden" name="a" id = 'a' value="NOTHING">
    <input type="hidden" name="ans1" id = 'answer1' value="NOTHING">
    <input type="hidden" name="ans2" id = 'answer2' value="NOTHING">
    <input type="hidden" name="dur" id = 'dur' value="NOTHING">
-
+   <input type="hidden" name="start_t" id = 'start_t' value="NOTHING">
 	 </form>
          <a href="#" class="myButton submit">Submit Answer</a>
 
-	 <?php } ?>
+	<?php } ?>
 
-<?php
-#PHP Source Code
-require "utilities/phpspellcheck/include.php";
+	 <?php 
 
-//$mySpell = new SpellCheckButton();
-//$mySpell->InstallationPath = "/phpspellcheck/";
-//$mySpell->Fields = "ALL";
-//echo $mySpell->SpellImageButton();
+	#PHP Source Code - Spell Check
+	require "utilities/phpspellcheck/include.php";
+
+	//$mySpell = new SpellCheckButton();
+	//$mySpell->InstallationPath = "/phpspellcheck/";
+	//$mySpell->Fields = "ALL";
+	//echo $mySpell->SpellImageButton();
 
 
-$mySpell = new SpellAsYouType();
-$mySpell->InstallationPath = "utilities/phpspellcheck/";
-$mySpell->Fields = "ALL";
-echo $mySpell->Activate();
-?>
+	$mySpell = new SpellAsYouType();
+	$mySpell->InstallationPath = "utilities/phpspellcheck/";
+	$mySpell->Fields = "ALL";
+	echo $mySpell->Activate();
+
+	 ?>
 
          <div>
 

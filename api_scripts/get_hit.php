@@ -3,19 +3,15 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 include("parameters.php");
-
-
+include("api_functions.php");
+include("../url2.php");
 $operation = "GetHIT";
 $HITId=$_REQUEST['hid'];
 
 $timestamp = generate_timestamp(time());
 $signature = generate_signature($SERVICE_NAME, $operation, $timestamp, $AWS_SECRET_ACCESS_KEY);
 
-
-include("api_functions.php");
-
-
-$url2 = "https://mechanicalturk.amazonaws.com/onca/xml"
+$url2 = $URL2_HITS
 . "?Service=" . urlencode($SERVICE_NAME)
 . "&Operation=" . urlencode($operation)
 . "&Version=" . urlencode($SERVICE_VERSION)

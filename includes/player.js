@@ -11,6 +11,7 @@ var playTimer;
 var output="";
 var num_lines=0;
 var submit_count=0;
+var f_rate=40;
 
 $( document ).ready(function() {
   //alert(images_path);
@@ -25,7 +26,7 @@ $( document ).ready(function() {
 
     for (i = 0; i < image_count; i++) {
       images[i] = new Image()
-      images[i].src = '../../Annotators/'+images_path+"/Kinect_" + pad(i+1,4) + ".jpg";
+      images[i].src = '../../'+images_path+"/Kinect_" + pad(i+1,4) + ".jpg";
       //images[i].src = '../../Annotators/'+images_path+"/RGB_" + (i+1) + ".png";
       //console.log(images[i].src);
     }
@@ -132,7 +133,7 @@ function remove_from_timeline(numIdSelector) {
   $("."+numIdSelector).remove();
 }
 
-function getOverlap(x1,x2,y1,y2){
+function getOverlap(x1,x2,y1,y2) {
   if ((x1 <= y2) && (y1 <= x2)) {
     return true;
   } else {
@@ -145,57 +146,63 @@ function addAnnon()
   var aL = $('.actLabel').val();
   var sF = $('.sframe').val();
   var eF = $('.eframe').val();
+
   var check_sp = "true";
   var sC = document.getElementById('livespell__input__0___livespell_proxy'), oChild;
 
-
   //$('#livespell__input__0___livespell_proxy .livespell_redwiggle').length
-  for(i = 0; i < sC.childNodes.length; i++){
-        oChild = sC.childNodes[i];
-        if(oChild.nodeName == 'SPAN'){
-	     check_sp="false";
-            //alert(oChild.id);
-        }
-    }
+  for(i = 0; i < sC.childNodes.length; i++) {
+ 	 oChild = sC.childNodes[i];
+  	if(oChild.nodeName == 'SPAN') { 
+  		check_sp="false";
+  		//alert(oChild.id);
+  	}
+  }// end for
 
-/*
-  var sC;
+ /*var sC;
+
   $.ajax({
 	async: false,
 	type: 'get',
 	url: "utilities/spell_check.php?phrase="+aL,
-	//dataType: 'json',
 	success: function(result){
 		sC = result;
 		//alert(result+"aa");
 		return sC;
-		}
-	}); */
-
-  if ((aL != '') && (sF != '') && (eF != '') && (check_sp == "true")) { 
+	}
+  });*/
+ 
+  var delayMillis = 4000;
+  setTimeout(function() {	 
+  if ((aL != '') && (sF != '') && (eF != '') && (check_sp == "true")) {
   //if ((aL != '') && (sF != '') && (eF != '')) {
-    if(parseInt(sF) >= parseInt(eF))   alert('Start frame cannot be after end frame!');
+  //alert(num_lines);//debug
+    if(parseInt(sF) >= parseInt(eF))
+	alert('Start frame cannot be after end frame!');
     else {
 
-      num_lines+=1;
-      var row = "<tr id='info' class='itemNum-"+num_lines+"'><td><div >"+aL+"</div></td><td><div>"+sF+"</div></td><td><div>"+eF+"</div></td><td><a href='#' class='delete'>delete</a></td></tr>";
-      $(row).appendTo('#ann-table .row-elements');
+	num_lines+=1;
+      	var row = "<tr id='info' class='itemNum-"+num_lines+"'><td><div >"+aL+"</div></td><td><div>"+sF+"</div></td><td><div>"+eF+"</div></td><td><a href='#' class='delete'>delete</a></td></tr>";
+      	$(row).appendTo('#ann-table .row-elements');
 
-      output+=aL+","+sF+","+eF+"\r\n";
+      	output+=aL+","+sF+","+eF+"\r\n";
 
-      $(".sframe").val("");
-      $(".eframe").val("");
-      $(".actLabel").val("");
-      add_to_timeline(aL,sF,eF,num_lines);
+      	$(".sframe").val("");
+      	$(".eframe").val("");
+      	$(".actLabel").val("");
+      	add_to_timeline(aL,sF,eF,num_lines);
 
 
     }
-  }else {
-    alert('Some Fields are empty, Please make sure you fill in the activity label and its start and end frames before adding the annotation. Also, check if you have made any spelling mistakes!');
-  }
+  } // end if
+  else {
+  	alert('Some Fields are empty, Please make sure you fill in the activity label and its start and end frames before adding the annotation. Also, check if you have any spelling misakes!');
+  } // end else
+
+  }, delayMillis);
 
   return false;
-}
+}// end function
 
 $(document).on("click", ".delete", function(e) {
   deletionSelector = $(this).parent().parent().attr('class');
@@ -205,20 +212,22 @@ $(document).on("click", ".delete", function(e) {
   return false;
 });
 
-$('.submit').click(function(){
+$('.submit').click(function() {
 
     var ans1 = $('#ans1').val();
     var ans2 = $('#ans2').val();
 
-    if (num_lines<7) alert('You have too few annotation entries. Please identify more activities before submitting your answer.');
+
+    if (num_lines<3) alert('You have too few annotation entries. Please identify more activities before submitting your answer.');
 
     else if ((ans1 == '') || (ans2 == '')) alert('You have to answer the two questions in Section 1 first.');
 
     else {
       if(submit_count==0)
       {
-        alert("Would you please consider going back to the video and adding more labels that describe extended activities (ones that are made from a number of shorter ones)? Remember you will be rewarded based on the number of activities you identify.")
-        submit_count+=1;
+       // alert("Would you please consider going back to the video and adding more labels that describe extended activities (ones that are made from a number of shorter ones)? Remember you will be rewarded based on the number of activities you identify.")
+         alert("Would you please consider going back to the video and adding more labels that describe extended activities (ones that are made from a number of shorter ones)? If you believe you have finished please click again the \"Submit Answer\" button.")
+	submit_count+=1;
       }
       else if(submit_count==1)
       {
@@ -228,8 +237,9 @@ $('.submit').click(function(){
         $('#answer1').val(ans1);
         $('#answer2').val(ans2);
         $('#dur').val(dur);
+	$('#start_t').val(start);
 
-        $.post('../save_activity_annotations.php',{vid:vid,ann:output,answer1:ans1,answer2:ans2,wID:wID,dur:dur},function(a)
+        $.post('../save_activity_annotations.php',{vid:vid,ann:output,answer1:ans1,answer2:ans2,wID:wID,dur:dur,start_tt:start},function(a)
         {
           alert("Done. Thank you!");
           $('#sendData').submit();
@@ -300,7 +310,7 @@ $(window).on("load", function() {
         $('#play-pause').removeClass('playing');
         $('#play-pause').css('background-position','213px -11px');
       }                        //  ..  setTimeout()
-    }, 100)
+    }, f_rate) //100
   }
 
   function getCurrentFrame() {

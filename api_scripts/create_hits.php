@@ -4,14 +4,14 @@ ini_set('display_errors', '1');
 
 include("parameters.php");
 include("api_functions.php");
-
+include("../url2.php");
 
 $operation = "CreateHIT";
 $title = "Highly Paid: Simple activity video annotation (BONUSES up to 3.5 USD per assignment based on work quality)";
 $description = "In this task you are asked to watch a video multiple times and write all the activities you observe using short labels (2-3 words). Please allow up to 1-2 minutes for the video to load.";
 
 
-$assignment_duration=1200;
+$assignment_duration=1000; // 1200
 $reward=0.20;
 
 //echo $description;
@@ -21,6 +21,8 @@ $frame_height = 800;
 
 $timestamp = generate_timestamp(time());
 $signature = generate_signature($SERVICE_NAME, $operation, $timestamp, $AWS_SECRET_ACCESS_KEY);
+
+
 
 
 //scan the video folder
@@ -43,11 +45,7 @@ foreach ($arr as $key=>$id)
     //$assignment_duration=??
     //$reward=??
 
-
-
-    //https://mechanicalturk.amazonaws.com/onca/xml https://mechanicalturk.sandbox.amazonaws.com
-
-    $url2 = "https://mechanicalturk.sandbox.amazonaws.com"
+    $url2 = $URL2_HITS
   . "?Service=" . urlencode($SERVICE_NAME)
   . "&Operation=" . urlencode($operation)
   . "&Title=" . urlencode($title)
@@ -63,15 +61,17 @@ foreach ($arr as $key=>$id)
   . "&Signature=" . urlencode($signature)
   . "&QualificationRequirement.1.QualificationTypeId=00000000000000000040"
   . "&QualificationRequirement.1.Comparator=GreaterThan"
-  . "&QualificationRequirement.1.IntegerValue=20"
+  . "&QualificationRequirement.1.IntegerValue=0"//0
   . "&QualificationRequirement.2.QualificationTypeId=000000000000000000L0"
   . "&QualificationRequirement.2.Comparator=GreaterThan"
-  . "&QualificationRequirement.2.IntegerValue=80"
-  . "&MaxAssignments=5"
+  . "&QualificationRequirement.2.IntegerValue=0"//80
+  . "&MaxAssignments=2"
   . "&Keywords=activity,%20video,%20labelling,%20annotation,%20ground+truth";
 
 
- echo $url2."<br>";
+
+echo $url2."<br>";
+
 
     /*
     $xml = simplexml_load_file($url2);
@@ -83,23 +83,5 @@ foreach ($arr as $key=>$id)
     */
 
 }
-
-
-
-
-
-
-
-
-// Check for and print results and errors
-//function print_errors($error_nodes) {
- // print "There was an error processing your request:\n";
- // foreach ($error_nodes as $error) {
-   // print "  Error code:    " . $error->Code . "\n";
-   // print "  Error message: " . $error->Message . "\n";
- // }
-//}
-
-
 
 ?>

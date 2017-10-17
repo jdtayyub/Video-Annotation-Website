@@ -4,6 +4,9 @@ ini_set('display_errors', '1');
 
 
 include("parameters.php");
+include("api_functions.php");
+//include("../save_activity_annotations.php");
+include("../url2.php");
 
 $operation = "SearchHITs";
 
@@ -12,7 +15,7 @@ $signature = generate_signature($SERVICE_NAME, $operation, $timestamp, $AWS_SECR
 
 
 
-include("api_functions.php");
+//include("api_functions.php");
 
 
 ?>
@@ -34,7 +37,7 @@ table, td, th {
 
 echo "<center><h1>Manage HITs<h1>";
 
-$url2 = "https://mechanicalturk.amazonaws.com/onca/xml"
+$url2 = $URL2_HITS
 . "?Service=" . urlencode($SERVICE_NAME)
 . "&Operation=" . urlencode($operation)
 . "&AWSAccessKeyId=" . urlencode($AWS_ACCESS_KEY_ID)
@@ -49,11 +52,14 @@ $xml = simplexml_load_file($url2);
 
 $i=1;
 echo "<form method='post' action='manage_hits.php'>";
-echo "<table><tr><th><th>HIT id<th>Title<th>Expiring<th>Done<th>Renew";
+echo "<table><tr><th><th>HIT id<th>Title<th>Expiring<th>Done<th>Renew<th>Start Time<th>End Time";
 $total=0;
 $done=0;
+$end_time=0;
+
 foreach($xml->SearchHITsResult->HIT as $hit)
 {
+  $start_time = $hit->Timestamp;
   //print_r($hit);
   $percentage_achieved=($hit->MaxAssignments-$hit->NumberOfAssignmentsAvailable)/($hit->MaxAssignments+0.00);
   $remaining_time_percentage=1-max((strtotime(str_replace("Z","",str_replace("T"," ",$hit->Expiration)))-time())/(1*24.0*60*60) ,0);
@@ -97,10 +103,13 @@ foreach($xml->SearchHITsResult->HIT as $hit)
         alert("Error!");
     }
     );'>
+<?php
+echo "<td>$hit->Timestamp<td>$end_time"
+?>
 
 <?php
   }
 }
 
-echo "<tr><td><td><td><td><td> [<span id='spn_done'>$done</span>/<span id='spn_total'>$total</span>]</table></center>";
+echo "<tr><td><td><td><td><td> [<span id='spn_done'>$done</span>/<span id='spn_total'>$total</span>]<td><td><td></table></center>";
 ?>

@@ -4,7 +4,7 @@ ini_set('display_errors', '1');
 
 
 include("parameters.php");
-
+include("../url2.php");
 
 $operation = "ExtendHIT";
 $HITId=$_REQUEST['hid'];
@@ -20,7 +20,7 @@ include("api_functions.php");
 
 //echo $HITId."<br>";
 
-$url2 = "https://mechanicalturk.amazonaws.com/onca/xml"
+$url2 = $URL2_HITS;
 . "?Service=" . urlencode($SERVICE_NAME)
 . "&Operation=" . urlencode($operation)
 . "&ExpirationIncrementInSeconds=".urlencode($ExpirationIncrementInSeconds)

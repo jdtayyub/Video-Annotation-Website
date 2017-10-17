@@ -3,3 +3,197 @@
 [17-Nov-2016 15:09:42 UTC] PHP Notice:  Trying to get property of non-object in /home/jdtayyub/public_html/api_scripts/get_hit.php on line 60
 [18-Nov-2016 17:44:34 UTC] PHP Warning:  scandir(../vids/vid3/images): failed to open dir: No such file or directory in /home/jdtayyub/public_html/api_scripts/create_hits.php on line 65
 [18-Nov-2016 17:44:34 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/jdtayyub/public_html/api_scripts/create_hits.php on line 65
+[09-Oct-2017 14:15:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_timestamp() in /home/leedsamturk/public_html/api_scripts/create_hits.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 21
+[09-Oct-2017 14:20:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_timestamp() in /home/leedsamturk/public_html/api_scripts/create_hits.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 21
+[09-Oct-2017 14:21:15 UTC] PHP Fatal error:  Cannot redeclare print_errors() (previously declared in /home/leedsamturk/public_html/api_scripts/create_hits.php:94) in /home/leedsamturk/public_html/api_scripts/api_functions.php on line 25
+[09-Oct-2017 14:25:52 UTC] PHP Warning:  scandir(../vids/vid2/images): failed to open dir: No such file or directory in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 40
+[09-Oct-2017 14:25:52 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 40
+[09-Oct-2017 14:25:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function constructQuestion() in /home/leedsamturk/public_html/api_scripts/create_hits.php:56
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 56
+[09-Oct-2017 14:29:51 UTC] PHP Warning:  scandir(../vids/vid2/images_clad): failed to open dir: No such file or directory in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 40
+[09-Oct-2017 14:29:51 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 40
+[09-Oct-2017 14:29:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function constructQuestion() in /home/leedsamturk/public_html/api_scripts/create_hits.php:56
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 56
+[09-Oct-2017 14:29:54 UTC] PHP Warning:  scandir(../vids/vid2/images_clad): failed to open dir: No such file or directory in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 40
+[09-Oct-2017 14:29:54 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 40
+[09-Oct-2017 14:29:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function constructQuestion() in /home/leedsamturk/public_html/api_scripts/create_hits.php:56
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 56
+[09-Oct-2017 14:32:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function constructQuestion() in /home/leedsamturk/public_html/api_scripts/create_hits.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 57
+[09-Oct-2017 14:33:36 UTC] PHP Warning:  scandir(../vids/vid5/images_clad): failed to open dir: No such file or directory in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 41
+[09-Oct-2017 14:33:36 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 41
+[09-Oct-2017 14:33:49 UTC] PHP Warning:  scandir(../vids/vid5/images_clad): failed to open dir: No such file or directory in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 41
+[09-Oct-2017 14:33:49 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 41
+[13-Oct-2017 10:59:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_timestamp() in /home/leedsamturk/public_html/api_scripts/manage_hits.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/manage_hits.php on line 10
+[13-Oct-2017 14:18:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_timestamp() in /home/leedsamturk/public_html/api_scripts/extend_hits.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/extend_hits.php on line 14
+[13-Oct-2017 14:18:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_timestamp() in /home/leedsamturk/public_html/api_scripts/extend_hits.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/extend_hits.php on line 14
+[13-Oct-2017 14:19:47 UTC] PHP Notice:  Undefined index: hid in /home/leedsamturk/public_html/api_scripts/get_hit.php on line 9
+[13-Oct-2017 14:19:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_timestamp() in /home/leedsamturk/public_html/api_scripts/get_hit.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/get_hit.php on line 11
+[13-Oct-2017 14:20:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_timestamp() in /home/leedsamturk/public_html/api_scripts/get_hit.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/get_hit.php on line 11
+[13-Oct-2017 14:21:20 UTC] PHP Notice:  Undefined index: vid in /home/leedsamturk/public_html/api_scripts/get_hit.php on line 35
+[13-Oct-2017 14:22:35 UTC] PHP Notice:  Undefined index: vid in /home/leedsamturk/public_html/api_scripts/get_hit.php on line 35
+[13-Oct-2017 14:28:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_timestamp() in /home/leedsamturk/public_html/api_scripts/extend_hits.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/extend_hits.php on line 14
+[13-Oct-2017 14:28:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function generate_timestamp() in /home/leedsamturk/public_html/api_scripts/extend_hits.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/leedsamturk/public_html/api_scripts/extend_hits.php on line 14
+[13-Oct-2017 15:23:56 UTC] PHP Notice:  Undefined variable: hi in /home/leedsamturk/public_html/api_scripts/manage_hits.php on line 57
+[13-Oct-2017 15:23:56 UTC] PHP Notice:  Trying to get property of non-object in /home/leedsamturk/public_html/api_scripts/manage_hits.php on line 57
+[13-Oct-2017 15:38:41 UTC] PHP Notice:  Undefined variable: hit in /home/leedsamturk/public_html/api_scripts/manage_hits.php on line 57
+[13-Oct-2017 15:38:41 UTC] PHP Notice:  Trying to get property of non-object in /home/leedsamturk/public_html/api_scripts/manage_hits.php on line 57
+[13-Oct-2017 16:17:34 UTC] PHP Notice:  Undefined index: vid in /home/leedsamturk/public_html/save_activity_annotations.php on line 2
+[13-Oct-2017 16:17:34 UTC] PHP Notice:  Undefined index: ann in /home/leedsamturk/public_html/save_activity_annotations.php on line 3
+[13-Oct-2017 16:17:34 UTC] PHP Notice:  Undefined index: wID in /home/leedsamturk/public_html/save_activity_annotations.php on line 4
+[13-Oct-2017 16:17:34 UTC] PHP Notice:  Undefined index: answer1 in /home/leedsamturk/public_html/save_activity_annotations.php on line 5
+[13-Oct-2017 16:17:34 UTC] PHP Notice:  Undefined index: answer2 in /home/leedsamturk/public_html/save_activity_annotations.php on line 6
+[13-Oct-2017 16:17:34 UTC] PHP Notice:  Undefined index: dur in /home/leedsamturk/public_html/save_activity_annotations.php on line 7
+[13-Oct-2017 16:17:34 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/annotation_171013161734_6552.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 13
+[13-Oct-2017 16:17:34 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/qualTestAnswers_171013161734_6552.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 15
+[13-Oct-2017 16:19:56 UTC] PHP Notice:  Undefined index: vid in /home/leedsamturk/public_html/save_activity_annotations.php on line 2
+[13-Oct-2017 16:19:56 UTC] PHP Notice:  Undefined index: ann in /home/leedsamturk/public_html/save_activity_annotations.php on line 3
+[13-Oct-2017 16:19:56 UTC] PHP Notice:  Undefined index: wID in /home/leedsamturk/public_html/save_activity_annotations.php on line 4
+[13-Oct-2017 16:19:56 UTC] PHP Notice:  Undefined index: answer1 in /home/leedsamturk/public_html/save_activity_annotations.php on line 5
+[13-Oct-2017 16:19:56 UTC] PHP Notice:  Undefined index: answer2 in /home/leedsamturk/public_html/save_activity_annotations.php on line 6
+[13-Oct-2017 16:19:56 UTC] PHP Notice:  Undefined index: dur in /home/leedsamturk/public_html/save_activity_annotations.php on line 7
+[13-Oct-2017 16:19:56 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/annotation_171013161956_2503.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 13
+[13-Oct-2017 16:19:56 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/qualTestAnswers_171013161956_2503.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 15
+[13-Oct-2017 16:19:59 UTC] PHP Notice:  Undefined index: vid in /home/leedsamturk/public_html/save_activity_annotations.php on line 2
+[13-Oct-2017 16:19:59 UTC] PHP Notice:  Undefined index: ann in /home/leedsamturk/public_html/save_activity_annotations.php on line 3
+[13-Oct-2017 16:19:59 UTC] PHP Notice:  Undefined index: wID in /home/leedsamturk/public_html/save_activity_annotations.php on line 4
+[13-Oct-2017 16:19:59 UTC] PHP Notice:  Undefined index: answer1 in /home/leedsamturk/public_html/save_activity_annotations.php on line 5
+[13-Oct-2017 16:19:59 UTC] PHP Notice:  Undefined index: answer2 in /home/leedsamturk/public_html/save_activity_annotations.php on line 6
+[13-Oct-2017 16:19:59 UTC] PHP Notice:  Undefined index: dur in /home/leedsamturk/public_html/save_activity_annotations.php on line 7
+[13-Oct-2017 16:19:59 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/annotation_171013161959_7195.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 13
+[13-Oct-2017 16:19:59 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/qualTestAnswers_171013161959_7195.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 15
+[13-Oct-2017 16:20:00 UTC] PHP Notice:  Undefined index: vid in /home/leedsamturk/public_html/save_activity_annotations.php on line 2
+[13-Oct-2017 16:20:00 UTC] PHP Notice:  Undefined index: ann in /home/leedsamturk/public_html/save_activity_annotations.php on line 3
+[13-Oct-2017 16:20:00 UTC] PHP Notice:  Undefined index: wID in /home/leedsamturk/public_html/save_activity_annotations.php on line 4
+[13-Oct-2017 16:20:00 UTC] PHP Notice:  Undefined index: answer1 in /home/leedsamturk/public_html/save_activity_annotations.php on line 5
+[13-Oct-2017 16:20:00 UTC] PHP Notice:  Undefined index: answer2 in /home/leedsamturk/public_html/save_activity_annotations.php on line 6
+[13-Oct-2017 16:20:00 UTC] PHP Notice:  Undefined index: dur in /home/leedsamturk/public_html/save_activity_annotations.php on line 7
+[13-Oct-2017 16:20:00 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/annotation_171013162000_8275.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 13
+[13-Oct-2017 16:20:00 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/qualTestAnswers_171013162000_8275.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 15
+[13-Oct-2017 16:22:33 UTC] PHP Notice:  Undefined index: vid in /home/leedsamturk/public_html/save_activity_annotations.php on line 2
+[13-Oct-2017 16:22:33 UTC] PHP Notice:  Undefined index: ann in /home/leedsamturk/public_html/save_activity_annotations.php on line 3
+[13-Oct-2017 16:22:33 UTC] PHP Notice:  Undefined index: wID in /home/leedsamturk/public_html/save_activity_annotations.php on line 4
+[13-Oct-2017 16:22:33 UTC] PHP Notice:  Undefined index: answer1 in /home/leedsamturk/public_html/save_activity_annotations.php on line 5
+[13-Oct-2017 16:22:33 UTC] PHP Notice:  Undefined index: answer2 in /home/leedsamturk/public_html/save_activity_annotations.php on line 6
+[13-Oct-2017 16:22:33 UTC] PHP Notice:  Undefined index: dur in /home/leedsamturk/public_html/save_activity_annotations.php on line 7
+[13-Oct-2017 16:22:33 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/annotation_171013162233_2162.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 13
+[13-Oct-2017 16:22:33 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/qualTestAnswers_171013162233_2162.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 15
+[13-Oct-2017 16:22:36 UTC] PHP Notice:  Undefined index: vid in /home/leedsamturk/public_html/save_activity_annotations.php on line 2
+[13-Oct-2017 16:22:36 UTC] PHP Notice:  Undefined index: ann in /home/leedsamturk/public_html/save_activity_annotations.php on line 3
+[13-Oct-2017 16:22:36 UTC] PHP Notice:  Undefined index: wID in /home/leedsamturk/public_html/save_activity_annotations.php on line 4
+[13-Oct-2017 16:22:36 UTC] PHP Notice:  Undefined index: answer1 in /home/leedsamturk/public_html/save_activity_annotations.php on line 5
+[13-Oct-2017 16:22:36 UTC] PHP Notice:  Undefined index: answer2 in /home/leedsamturk/public_html/save_activity_annotations.php on line 6
+[13-Oct-2017 16:22:36 UTC] PHP Notice:  Undefined index: dur in /home/leedsamturk/public_html/save_activity_annotations.php on line 7
+[13-Oct-2017 16:22:36 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/annotation_171013162236_5654.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 13
+[13-Oct-2017 16:22:36 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/qualTestAnswers_171013162236_5654.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 15
+[13-Oct-2017 16:22:38 UTC] PHP Notice:  Undefined index: vid in /home/leedsamturk/public_html/save_activity_annotations.php on line 2
+[13-Oct-2017 16:22:38 UTC] PHP Notice:  Undefined index: ann in /home/leedsamturk/public_html/save_activity_annotations.php on line 3
+[13-Oct-2017 16:22:38 UTC] PHP Notice:  Undefined index: wID in /home/leedsamturk/public_html/save_activity_annotations.php on line 4
+[13-Oct-2017 16:22:38 UTC] PHP Notice:  Undefined index: answer1 in /home/leedsamturk/public_html/save_activity_annotations.php on line 5
+[13-Oct-2017 16:22:38 UTC] PHP Notice:  Undefined index: answer2 in /home/leedsamturk/public_html/save_activity_annotations.php on line 6
+[13-Oct-2017 16:22:38 UTC] PHP Notice:  Undefined index: dur in /home/leedsamturk/public_html/save_activity_annotations.php on line 7
+[13-Oct-2017 16:22:38 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/annotation_171013162238_9924.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 13
+[13-Oct-2017 16:22:38 UTC] PHP Warning:  file_put_contents(vids/vid/activity_annotations/qualTestAnswers_171013162238_9924.txt): failed to open stream: No such file or directory in /home/leedsamturk/public_html/save_activity_annotations.php on line 15
+[13-Oct-2017 16:27:31 UTC] PHP Notice:  Undefined variable: timestamp in /home/leedsamturk/public_html/api_scripts/manage_hits.php on line 44
+[13-Oct-2017 16:27:31 UTC] PHP Notice:  Undefined variable: signature in /home/leedsamturk/public_html/api_scripts/manage_hits.php on line 48
+[13-Oct-2017 16:27:31 UTC] PHP Warning:  simplexml_load_file(https://mechanicalturk.sandbox.amazonaws.com?Service=AWSMechanicalTurkRequester&amp;Operation=SearchHITs&amp;AWSAccessKeyId=AKIAIKDNLOAXG6CXMWXQ&amp;Timestamp=&amp;Version=2014-08-15&amp;PageSize=100&amp;SortProperty=Expiration&amp;Signature=): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in /home/leedsamturk/public_html/api_scripts/manage_hits.php on line 51
+[13-Oct-2017 16:27:31 UTC] PHP Warning:  simplexml_load_file(): I/O warning : failed to load external entity &quot;https://mechanicalturk.sandbox.amazonaws.com?Service=AWSMechanicalTurkRequester&amp;Operation=SearchHITs&amp;AWSAccessKeyId=AKIAIKDNLOAXG6CXMWXQ&amp;Timestamp=&amp;Version=2014-08-15&amp;PageSize=100&amp;SortProperty=Expiration&amp;Signature=&quot; in /home/leedsamturk/public_html/api_scripts/manage_hits.php on line 51
+[13-Oct-2017 16:27:31 UTC] PHP Notice:  Trying to get property of non-object in /home/leedsamturk/public_html/api_scripts/manage_hits.php on line 60
+[13-Oct-2017 16:27:31 UTC] PHP Notice:  Trying to get property of non-object in /home/leedsamturk/public_html/api_scripts/manage_hits.php on line 60
+[13-Oct-2017 16:27:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/leedsamturk/public_html/api_scripts/manage_hits.php on line 60
+[16-Oct-2017 14:26:59 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:27:32 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:27:34 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:28:10 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:28:11 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:28:57 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:28:58 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:28:59 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:29:16 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:29:17 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:29:17 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:29:18 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:31:09 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:31:11 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:31:16 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:31:17 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:31:28 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:33:17 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:35:28 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:35:29 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:35:30 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:35:31 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:35:32 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:35:33 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:35:33 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:35:38 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:39:23 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:08 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:11 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:12 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:13 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:14 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:15 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:16 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:21 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:22 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:23 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:23 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:24 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:25 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:26 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:26 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:43:26 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 52
+[16-Oct-2017 14:44:59 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:45:00 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:45:01 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:45:41 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:46:54 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:46:57 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:46:57 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:51:55 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:51:56 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:51:57 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:51:58 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:51:59 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:52:06 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:52:06 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:52:07 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:53:28 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53
+[16-Oct-2017 14:53:30 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/leedsamturk/public_html/api_scripts/create_hits.php on line 53

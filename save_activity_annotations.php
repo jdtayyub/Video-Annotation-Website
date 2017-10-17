@@ -10,6 +10,7 @@ $time=date('ymdHis');
 $r=rand(1000,9999);
 $path='vids/vid'.$vid.'/';
 $annotation_path=$path."activity_annotations/";
+//file_put_contents ($annotation_path."ann",["hello world"]); //debug
 file_put_contents ( $annotation_path."annotation_".$vid."".$wID."".$time."_"
 .$r.".txt" , "#video ".$vid."\r\n".$ann);
 file_put_contents ( $annotation_path."qualTestAnswers_".$vid."".$wID."".$time."_"

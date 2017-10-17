@@ -172,8 +172,8 @@ function addAnnon()
 	}
   });*/
  
-  var delayMillis = 4000;
-  setTimeout(function() {	 
+  //var delayMillis = 4000;
+  //setTimeout(function() {	 
   if ((aL != '') && (sF != '') && (eF != '') && (check_sp == "true")) {
   //if ((aL != '') && (sF != '') && (eF != '')) {
   //alert(num_lines);//debug
@@ -199,7 +199,7 @@ function addAnnon()
   	alert('Some Fields are empty, Please make sure you fill in the activity label and its start and end frames before adding the annotation. Also, check if you have any spelling misakes!');
   } // end else
 
-  }, delayMillis);
+ // }, delayMillis);
 
   return false;
 }// end function
